@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# Node
+node_modules/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# 运行时产物
+backend/storage/
+backend/.env
+backend/static/
+frontend/dist/
+frontend/.tmp/
+
+# 测试产物
+*.db
+scripts/downloaded_report.docx
+
+# 临时部署辅助脚本
+_*.ps1

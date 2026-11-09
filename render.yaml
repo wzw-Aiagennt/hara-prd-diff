@@ -1,0 +1,15 @@
+# Render.com 自动部署配置
+# 推送到 GitHub 后, 在 Render 连接此仓库, 自动读取本文件部署
+services:
+  - type: web
+    name: hara-prd-diff
+    runtime: docker
+    plan: free              # 免费层; 需持久化可升 starter ($7/月)
+    region: oregon          # 美西, 国内访问速度可接受
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: LLM_PROVIDER
+        value: mock         # 改 deepseek + 加 DEEPSEEK_API_KEY 即切真模型
+      # - key: DEEPSEEK_API_KEY
+      #   sync: false       # 在 Render Dashboard 手动填入, 不入仓库

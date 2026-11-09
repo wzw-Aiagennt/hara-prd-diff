@@ -1,0 +1,25 @@
+# ---- Web / API ----
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+sse-starlette==2.1.3
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# ---- 文件解析 (需求①) ----
+python-docx==1.1.2        # Word / PRD 文本与表格提取
+pdfplumber==0.11.5        # PDF 文本 + 简单表格提取
+pandas==2.2.3             # 旧 HARA (Excel 矩阵) 读取
+openpyxl==3.1.5           # pandas 读取 .xlsx 引擎
+
+# ---- 差异比对 (需求②) ----
+# difflib 为 Python 标准库, 无需安装
+
+# ---- 大模型 (需求③, 现阶段 Mock; 后续接真实 DeepSeek) ----
+openai==1.59.6            # OpenAI 兼容协议客户端 (DeepSeek 兼容)
+
+# ---- 报告生成 (需求⑥) ----
+docxtpl==0.18.0           # Word 模板套版 (基于 python-docx)
+
+# ---- 存储 (会话 / 差异 / 人工意见) ----
+SQLAlchemy==2.0.36
